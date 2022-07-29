@@ -9,7 +9,6 @@ class Solution {
         {
             nums[i] = max*nums[i]+nums[i-n];
         }
-        
 		//Put pairs in proper positions
         int ind = 0;
         for(int i=n;i<nums.length;i++)
@@ -20,7 +19,10 @@ class Solution {
         }
         
         return nums;
-    }
-        
-    
+    }   
 }
+/*for(int i = 0; i < n; i++){
+   res[2 * i] = nums[i];
+   res[2 * i + 1] = nums[n+i];
+}
+return res;*/
