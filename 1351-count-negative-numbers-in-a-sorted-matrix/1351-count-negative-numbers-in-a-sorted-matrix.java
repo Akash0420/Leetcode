@@ -10,9 +10,8 @@ class Solution {
         return count;
     }
 }*/
-int count = 0;
-
-
+       //O(m*logn)//
+        int count = 0;
 		for (int i = 0, end = grid[i].length - 1;i < grid.length; i++) {
             int start=0;
 			while (start <= end) {
@@ -27,6 +26,5 @@ int count = 0;
 	
 		}
 		return count;
-	   
     }
 }
