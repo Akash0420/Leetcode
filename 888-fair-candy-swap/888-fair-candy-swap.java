@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
     public int[] fairCandySwap(int[] aliceSizes, int[] bobSizes) {
         int sum_a=0,sum_b=0;
         for(int i=0;i<aliceSizes.length;i++)
@@ -24,9 +24,9 @@ class Solution {
         }
         return res;
     }
-}
+}*/
 
-/*class Solution {
+class Solution {
     
     private int binarySearch(int[] arr,int target){ 
         int s=0,e = arr.length-1;
@@ -41,21 +41,21 @@ class Solution {
         return -1;
     }
     
-    public int[] fairCandySwap(int[] a, int[] b) { //a = Alice , b=Bob
+    public int[] fairCandySwap(int[] aliceSizes, int[] bobSizes) { //a = Alice , b=Bob
         int suma=0,sumb=0;
-        for(int i=0;i<a.length;i++)
-            suma+=a[i];
-        for(int i=0;i<b.length;i++)
-            sumb+=b[i];
+        for(int i=0;i<aliceSizes.length;i++)
+            suma+=aliceSizes[i];
+        for(int i=0;i<bobSizes.length;i++)
+            sumb+=bobSizes[i];
         
         int diff = (suma-sumb)/2;
         
-        Arrays.sort(a);
-        for(int num:b){
-            if (binarySearch(a,num+diff) !=-1) return new int[]{num+diff,num};
+        Arrays.sort(aliceSizes);
+        for(int num:bobSizes){
+            if (binarySearch(aliceSizes,num+diff) !=-1) return new int[]{num+diff,num};
         }
         
         return null;
         
     }
-}*/
+}
